@@ -15,8 +15,8 @@ BIN_WRAPPER=\
 	dh $@
 
 override_dh_auto_build:
-	cmake
-	dh auto_build
+	cmake .
+	dh_auto_build
 
 override_dh_auto_install:
 	mkdir -p $(DEB_DIR)/usr/bin $(DEB_DIR)$(PKG_LIB_DIR)/bin
