@@ -1,0 +1,13 @@
+Source: far2.17.0
+Section: science
+Priority: optional
+Build-Depends: libtbb2 (>= 2.2+r009-1)
+Maintainer: The Genome Institute <gmt@genome.wustl.edu>
+Uploaders: Eddie Belter <ebelter@genome.wustl.edu>
+Homepage: http://sourceforge.net/projects/theflexibleadap/
+
+Package: far2.17.0
+Architecture: amd64
+Depends: libtbb2 (>= 2.2+r009-1)
+Provides: far
+Description: FAR removes adapter sequences from deep sequencing data in FASTA/Q, CSFASTA/Q format (Illumina / Roche 454 / SOLiD Colorspace). It also demultiplexes barcoded runs. Systems:Windows/Linux. Visit: http://sourceforge.net/apps/mediawiki/theflexibleadap/

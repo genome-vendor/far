@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+PRG=far
+VER=2.17.0
+BIN_LIST=$$(find build -executable -type f)
+PKG=$(PRG)$(VER)
+DEB_DIR=debian/$(PKG)
+PKG_LIB_DIR=/usr/lib/$(PKG)
+BIN_WRAPPER=\
+'\#!/bin/sh\n'\
+'export PATH=$(PKG_LIB_DIR)/bin:$$PATH\n'\
+"exec $${BASE_BIN}" '"$$@"'
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	cmake
+	dh auto_build
+
+override_dh_auto_install:
+	mkdir -p $(DEB_DIR)/usr/bin $(DEB_DIR)$(PKG_LIB_DIR)/bin
+	for BIN in $(BIN_LIST); do \
+		BASE_BIN=$$(basename $${BIN});\
+		echo $(BIN_WRAPPER) | sed 's/^ *//' > $(DEB_DIR)/usr/bin/$${BASE_BIN}$(VER);\
+	done
+
+override_dh_strip:
+	echo "Do not create a *dbgsym*.ddeb package."
