@@ -1,0 +1,16 @@
+@AH right: adapter not aligned, reported - left: partyally maps,9bp/discarded
+T002022222
++
+''$#/5(-$
+@AI right: 10bp, left: empty read
+N
++
+B
+@AJ right: 9bp, left: empty read
+N
++
+B
+@AL right:match - left:match,(discarded, ends with 1)
+T21
++
+-$

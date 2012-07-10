@@ -1,0 +1,20 @@
+@left_tail:should work 
+TGAGATCGTTCAGTACGGCAATCGTATGCCGTCTTCAAAAAA
++
+BSSMNXUTVX``[````\`___^_^_`_`_``^_^XXXXXXX
+@left_tail:shouldnt work - right_tail:end with ATGC - right:end_with_ATGC - left:discarded_empty_read(N)
+TGAGATCGTTCAGTACGGCAATTCGTATGCCGTCTTAAAA
++
+BSSMNXUTVX``[````\`___^_^_`_`_``^_^XXXXX
+@left_tail:shouldnt work -  right_tail:shouldnt work - right:should_end_with_TGC-left:Discarded(T)
+TGGTCGTTCGTCGGCTCGTTGCCGTCTTTA
++
+BSSMNXUTVX``[````\^_`_`_``^_^X
+@left_tail:shouldnt work - right_tail:end with CAC - right:end_with_A_left:discarded_empty_read(N)
+TCACCGGGTGGGCCCCCCCCCCCACCGTCT
++
+BSSMNXUTVX`\`___^_^_`_`_``^_^X
+@left:begin_with_G-left_tail:should_work(begin with G) - right_tail:shouldnt work - right:discarded
+CGTCTTGCCCCCCCCCCTTTTTTTTTTTTAA
++
+BSSMNXUTXX``\`___^_^_`_`_``^_^X

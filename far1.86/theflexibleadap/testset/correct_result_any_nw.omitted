@@ -1,0 +1,4 @@
+>left:begin_with_G, discarded - left_tail:should_work,but discarded! - right_tail:shouldnt work - right:discarded
+GAAAAAAAA
+>left:should_work right:discarded! - right_tail:works,discarded 
+AAAAAAAA

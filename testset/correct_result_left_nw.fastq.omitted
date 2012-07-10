@@ -1,0 +1,24 @@
+@left_tail:shouldnt work - right_tail:shouldnt work - rigth:end with ATGC - left:discarded(C)
+C
++
+X
+@left_tail:shouldnt work - right_tail:end with ATGC - right:end_with_ATGC - left:discarded_empty_read(N)
+N
++
+B
+@left_tail:shouldnt work -  right_tail:shouldnt work - right:should_end_with_TGC-left:Discarded(T)
+T
++
+X
+@left:begin_with_G, discarded - left_tail:should_work,but discarded! - right_tail:shouldnt work - right:discarded
+GAAAAAAAA
++
+NXUTVX``[
+@left:should_work right:discarded! - right_tail:works,discarded 
+N
++
+B
+@left_tail:shouldnt work - right_tail:shouldnt work - both:left_remains-left:Discarded_9bp
+AAAAATTTT
++
+_`_``^_^X

@@ -1,0 +1,12 @@
+@left:begin_with_G-left_tail:should_work(begin with G) - right_tail:shouldnt work - right:discarded
+N
++
+B
+@left:should_work right:discarded! - right_tail:works,discarded 
+AAAAAAAA
++
+BSSMNXUT
+@left_tail:shouldnt work - right_tail:shouldnt work - right:discarded
+AAAAAAAAA
++
+BSSMNXUTV

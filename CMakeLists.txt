@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.6)
+PROJECT( FAR )
+file(MAKE_DIRECTORY build)
+set(EXECUTABLE_OUTPUT_PATH ${FAR_SOURCE_DIR}/build )
+ADD_SUBDIRECTORY( src )
