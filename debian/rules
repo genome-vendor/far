@@ -23,6 +23,7 @@ override_dh_auto_install:
 	for BIN in $(BIN_LIST); do \
 		BASE_BIN=$$(basename $${BIN});\
 		echo $(BIN_WRAPPER) | sed 's/^ *//' > $(DEB_DIR)/usr/bin/$${BASE_BIN}$(VER);\
+		install -m 755 $${BIN} $(DEB_DIR)$(PKG_LIB_DIR)/bin/$${BASE_BIN};\
 	done
 
 override_dh_strip:
