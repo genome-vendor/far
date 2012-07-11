@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+PKG="far"
+VER="2.17.0"
+PKG_DIR=/usr/lib/${PKG}${VER}
+
+if [ "$1" = "configure" ]; then
+    if [ ! -e /usr/bin/${PKG} ]; then
+        for pathname in ${PKG_DIR}/bin/*; do
+            filename=`basename $pathname`
+            update-alternatives --install /usr/bin/${filename} ${filename} /usr/bin/${filename}${VER} 1
+        done
+    fi
+fi
